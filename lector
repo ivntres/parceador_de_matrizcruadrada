@@ -1,0 +1,9 @@
+import csv
+
+reader = csv.reader(open('MapeoMedialab.csv', 'rb'))
+print "Source"+","+"Target"
+for index,row in enumerate(reader):
+    findatos = len(row)
+    for i in range(2,findatos):
+        if (row[i]=="1"):
+            print str(row[0])+','+str(i-1)
